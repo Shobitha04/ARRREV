@@ -1,0 +1,13 @@
+int deletearr(int a[], int x, int n)
+{
+ int i;
+ for(int i=0;i<n;i++)
+   if(arr[i]==x)
+     break;
+   if(i==n)//ele is not present in all n numbers
+     return n;
+ for(int j=i;j=n-1;j++)// when element is found we decrease number of elements(n-1)
+   arr[j]=arr[j+1];
+return n-1;
+
+}
