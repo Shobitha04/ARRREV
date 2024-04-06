@@ -1,0 +1,33 @@
+arr[0] -> arr[2]
+arr[1] -> arr[0]
+arr[2] -> arr[1]
+[30 5 20]
+[5 20 30]
+
+void leftrotate(int arr[])
+{
+ int temp = arr[0];
+ for(int i=1;i<n;i++)
+{
+ arr[i-1] = arr[i];
+arr[n-1] = temp;
+}
+}
+
+
+
+my code:
+void leftrotate(int arr[])
+{
+ int n= arr.length;
+ for(int i=0;i<n;i++)
+ {
+  for(int j=i-1;j<n;j++)
+  {
+   swap(a[i],a[j]);
+   i--;
+   j++;
+}
+}
+}
+
