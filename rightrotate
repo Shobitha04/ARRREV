@@ -1,0 +1,27 @@
+rotate by k number of positions
+Suppose nums = [1, 2, 3, 4, 5], k = 2, and n = 5.
+
+When i = 0:
+
+(i + k) % n = (0 + 2) % 5 = 2
+So, temp[2] = nums[0] = 1
+The temp array now looks like: [0, 0, 1, 0, 0]
+When i = 1:
+
+(i + k) % n = (1 + 2) % 5 = 3
+So, temp[3] = nums[1] = 2
+The temp array now looks like: [0, 0, 1, 2, 0]
+
+
+
+void rightrotate(int arr[],int k){
+  int n=arr.length;
+  k = k % n;(suppose k>length of arr, we take modulus)
+  int[]temp = new int[n];
+  for(int i=0;i<n;i++){
+    temp[(i + k) % n]= arr[i];
+    }
+  for(int i=0;i<n;i++){
+    arr[i] = temp[i];
+    }
+  }
