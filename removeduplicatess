@@ -11,3 +11,18 @@ void removeduplicates(int arr[i], int n)
     }
     return res;
   }
+OR
+class Solution {
+    public int removeDuplicates(int[] nums) {
+        if (nums.length == 0) return 0;
+
+        int k = 1;  // Start k at 1 since the first element is always unique.
+        
+        for (int i = 1; i < nums.length; i++) {
+            if (nums[i] != nums[i - 1]) {  // If current element is not equal to the previous element
+                nums[k] = nums[i];  // Update the position k with the current element
+                k++;  // Increment k to move to the next unique element
+            }
+        }
+        return k;
+    }
