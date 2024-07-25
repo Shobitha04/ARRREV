@@ -1,0 +1,15 @@
+void MajorityEle(int arr[]){
+int candidate=arr[0]; //candidate is the majority element repeated. let us initialise it to the 1st element in array
+int count=1;//by default, the arr[0] is majority and countis 1
+for(int i=1;i<arr.length();i++){
+if(count==0){
+candidate=arr[i];
+count++;
+}else if(arr[i]==candidate){
+count++;
+}else{
+count--;
+}
+}
+return candidate;
+}
