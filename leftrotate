@@ -14,6 +14,26 @@ arr[n-1] = temp;
 }
 }
 
+Input:
+
+arr = [1, 2, 3, 4, 5]
+n = 5
+Steps:
+
+Store the First Element:
+
+temp = arr[0] = 1
+Shift Elements to the Left:
+
+Before loop: arr = [1, 2, 3, 4, 5]
+Iteration 1 (i = 1): arr[0] = arr[1] → arr = [2, 2, 3, 4, 5]
+Iteration 2 (i = 2): arr[1] = arr[2] → arr = [2, 3, 3, 4, 5]
+Iteration 3 (i = 3): arr[2] = arr[3] → arr = [2, 3, 4, 4, 5]
+Iteration 4 (i = 4): arr[3] = arr[4] → arr = [2, 3, 4, 5, 5]
+Place the First Element at the End:
+
+arr[n - 1] = temp → arr[4] = 1 → arr = [2, 3, 4, 5, 1]
+
 
 
 my code:
