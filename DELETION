@@ -12,4 +12,47 @@ return n-1;
 
 }
 
+public class Main {
+
+    // Method to delete an element from the array
+    public static int deletearr(int[] arr, int x, int n) {
+        int i;
+        for (i = 0; i < n; i++) {
+            if (arr[i] == x) {
+                break;
+            }
+        }
+
+        // If the element is not found
+        if (i == n) {
+            return n;
+        }
+
+        // Shift elements to the left to fill the gap
+        for (int j = i; j < n - 1; j++) {
+            arr[j] = arr[j + 1];
+        }
+
+        // Return the new size of the array
+        return n - 1;
+    }
+
+    public static void main(String[] args) {
+        int[] arr = {1, 2, 3, 4, 5};
+        int n = arr.length;
+        int x = 3;  // Element to be deleted
+
+        // Delete the element
+        n = deletearr(arr, x, n);
+
+        // Print the array after deletion
+        System.out.print("Array after deletion: ");
+        for (int i = 0; i < n; i++) {
+            System.out.print(arr[i] + " ");
+        }
+        System.out.println();
+    }
+}
+
+
 
